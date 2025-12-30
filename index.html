@@ -4,17 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DigiStaff</title>
-    <!-- Шрифты оставляем -->
+    
+    <!-- 1. Оставляем Tailwind CDN для стилей -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Удаляем cdn.tailwindcss.com, так как Vite сам соберет стили из вашего CSS -->
-    <!-- Удаляем importmap, так как Vite сам управляет зависимостями через package.json -->
+    <!-- Ваши стили для скроллбара -->
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569; 
+      }
+    </style>
   </head>
   <body class="bg-slate-950 text-slate-100 antialiased">
     <div id="root"></div>
     
-    <!-- ВАЖНО: Подключаем точку входа вашего приложения -->
-    <!-- Если ваш файл называется index.tsx и лежит в корне (рядом с index.html) -->
+    <!-- 2. ГЛАВНОЕ ИСПРАВЛЕНИЕ: Подключаем файл запуска React -->
+    <!-- Vite требует явного указания входного файла -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
