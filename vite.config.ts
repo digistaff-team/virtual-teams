@@ -5,11 +5,18 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      // Базовый путь для GitHub Pages
-      base: '/virtual-teams/', 
+      base: '/virtual-teams/', // Важно!
       server: {
         port: 3000,
         host: '0.0.0.0',
+      },
+      build: {
+        sourcemap: false, // Отключаем sourcemap, чтобы убрать eval из них
+        rollupOptions: {
+            output: {
+                manualChunks: undefined,
+            },
+        },
       },
       plugins: [react()],
       define: {
@@ -23,4 +30,3 @@ export default defineConfig(({ mode }) => {
       }
     };
 });
-
