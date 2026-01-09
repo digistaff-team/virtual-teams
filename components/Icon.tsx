@@ -13,7 +13,9 @@ import {
   Bot,
   Sparkles,
   CheckCircle2,
-  X
+  X,
+  FlaskConical,
+  BarChart3
 } from 'lucide-react';
 
 const iconMap: Record<string, React.ElementType> = {
@@ -30,7 +32,9 @@ const iconMap: Record<string, React.ElementType> = {
   Bot,
   Sparkles,
   CheckCircle2,
-  X
+  X,
+  FlaskConical,
+  BarChart3
 };
 
 interface IconProps {

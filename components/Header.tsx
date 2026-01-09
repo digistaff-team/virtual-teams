@@ -20,7 +20,7 @@ export const Header: React.FC<HeaderProps> = ({ cartItems, onOpenCart }) => {
             className="h-10 w-10 object-contain"
           />
           <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400">
-            DigiStaff Team
+            DigiStaff
           </span>
         </div>
 
